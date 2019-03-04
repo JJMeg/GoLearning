@@ -1,2 +1,3 @@
 # GoLearning
-Go learning demos
+Go learning demos and notes
+Book: The Go Programming Language
