@@ -1,0 +1,27 @@
+package main
+
+import (
+	"fmt"
+	_ "fmt"
+)
+
+func main() {
+	const (
+		a = 1
+		b = 2
+		c = 3
+	)
+	fmt.Println(a + b)
+	fmt.Println(a - b)
+	fmt.Println(a * b)
+	fmt.Println(a / b)
+	fmt.Println(a << b)
+	fmt.Println(a < b)
+	fmt.Println(a % b)
+
+	var d int = 1
+	d++
+	fmt.Println(d)
+	d--
+	fmt.Println(d)
+}
