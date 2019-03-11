@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+	_ "fmt"
+)
+
+const (
+	Level1 = 1
+	Level2 = 2
+	Level3 = 3
+) //作枚举
+
+func main() {
+	const width = 5
+	const length int = 2
+
+	fmt.Println(width * length)
+
+	const status = Level1
+	fmt.Println(status)
+}
