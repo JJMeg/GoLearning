@@ -1,0 +1,36 @@
+package main
+
+import (
+	"fmt"
+	_ "fmt"
+)
+
+type Phone interface {
+	call()
+}
+
+type IPhone struct {
+}
+
+func (iPhone IPhone) call() {
+	fmt.Println("iPhone calling....")
+}
+
+type Nokia struct {
+}
+
+func (noKia Nokia) call() {
+	fmt.Println("Nokia calling......")
+}
+
+func main() {
+	var phone1 Phone
+	var phone2 Phone
+
+	phone1 = new(IPhone)
+	phone1.call()
+
+	phone2 = new(Nokia)
+	phone2.call()
+
+}
