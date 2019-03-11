@@ -1,0 +1,27 @@
+package main
+
+import (
+	"fmt"
+	_ "fmt"
+)
+
+type Person struct {
+	name     string
+	age      int
+	loaction string
+}
+
+func main() {
+	var amy Person
+	fmt.Println(amy)
+
+	amy.name = "amy"
+	amy.age = 10
+	amy.loaction = "haha"
+	fmt.Println(amy)
+
+	var p = &amy
+	p.loaction = "~~"
+	fmt.Println(amy)
+	fmt.Println(p.age)
+}
