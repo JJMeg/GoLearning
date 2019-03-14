@@ -1,5 +1,5 @@
 #### 工厂模式
-- Golang中没有构造函数，struct相当于java中的class，如何生成实例？
+- Golang中没有构造方法，struct相当于java中的class，如何生成实例？
 - 利用工厂模式可以实现构造函数
 
 ```go
