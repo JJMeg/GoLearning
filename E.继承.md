@@ -50,6 +50,7 @@ func main() {
 
 	stu.Person.SetAge(3)
 	stu.Person.salary=32
+  //stu.salary=32 省略中间匿名结构名也可以
 	stu.test()
 	stu.Person.GetAge()
 }
