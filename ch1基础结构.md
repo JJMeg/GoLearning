@@ -32,7 +32,6 @@
 - 在导入一个外部包后，只能够访问该包中导出的对象
 
 #### Go的编译过程
-  - https://studygolang.com/articles/10572
   - run: compile and run Go program 
       - go run执行完后生成归档文件和可执行文件
       - go run -a强制编译所有代码
