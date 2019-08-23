@@ -1,3 +1,5 @@
+# Chapter7-struct和method
+本文路线: [struct结构体](#struct结构体) -> [struct的声明](#struct的声明) -> [struct的初始化](#struct的初始化) -> [struct的嵌套](#struct的嵌套) -> [成员的可见性](#成员的可见性) -> [method](#method) -> [method的声明](#method的声明) -> [一些约束](#一些约束)
 
 ### struct结构体
 
@@ -95,6 +97,8 @@ type Tree struct {
 
 2. 嵌入其他结构体
 
+变相实现了继承，Person拥有了Region的所有属性
+
 ```Go
 type Person struct {
   Name      string
@@ -185,3 +189,41 @@ func main() {
 
 ### method
 method 方法，附属给一个接收者的函数，接收者是某种类型的变量
+
+### method的声明
+```Go
+func (接收者变量名称 接收者变量类型) 方法名() 返回值 {
+  ...
+}
+```
+
+```Go
+func (person *Person) Print(name string) bool {
+  fmt.Println(name)
+  return true
+}
+```
+
+### 一些约束
+- 只能为当前所在包内的类型定义方法
+- 接收者可为值类型和指针类型，不可为接口类型和指针的指针类型
+- 接收者为指针类型时，可用于修改其内容，接收者为值类型时不会改动其内容
+
+```Go
+// 接收者为指针类型
+func (person *Person) Setname(name string) bool {
+  fmt.Println(person.Name)
+
+  person.Setname(name)
+
+  fmt.Println(person.Name)
+  return true
+}
+// 接收者为值类型
+func (person Person) Print() bool {
+  fmt.Println(&person)
+  return true
+}
+```
+
+- 同一个接收者的方法不可重名，若接收者是一个结构体，其方法名不可以和该结构体内的成员重名
